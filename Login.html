@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PLM Classroom Scheduler</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div class="loader-section section-left">
+            <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half">
+        </div>
+        <div class="loader-section section-right">
+            <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half">
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="logo-section">
+            <img src="https://www.pikpng.com/pngl/b/78-780563_presidential-seal-png.png" alt="PLM Logo" class="plm-logo">
+            <div class="logo-text">
+                <h1>PAMANTASAN NG LUNGSOD NG MAYNILA</h1>
+                <p>University of the City of Manila</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="home-nav">Home</a></li>
+                <li><a href="Help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="accent-bar"></div>
+
+    <main class="login-container">
+        <div class="card-wrapper">
+            <div class="image-card">
+                <div class="vertical-text">P<br>L<br>M</div>
+            </div>
+
+            <div class="form-card">
+                <h2>Classroom Scheduler</h2>
+
+                <form action = "Scheduler.html">
+                    <div class="input-group">
+                        <input type="email" placeholder="PLM Email" pattern=".+@plm\.edu\.ph" title="Please use your official @plm.edu.ph email address." required>
+                        <span class="icon">👤</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="passwordInput" placeholder="Password" required>
+                        <span class="icon" onclick="togglePassword()" style="cursor: pointer;">👁️‍🗨️</span>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="Help.html">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="plm-footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="https://www.pikpng.com/pngl/b/78-780563_presidential-seal-png.png" alt="PLM Logo" class="footer-logo">
+            <div class="footer-title">
+                <h2>PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+                <p>University of the City of Manila</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="contact-header">For more information, you may contact us at:</p>
+            <p><strong>Address:</strong> Gen. Luna Cor. Muralla Streets, Intramuros Manila, Philippines 1002</p>
+            <p><strong>Email:</strong> ithelp@plm.edu.ph</p>
+            <p class="hotline">PLM Hotline: (02) 8 995-46-70</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Pamantasan ng Lungsod ng Maynila, All rights reserved.</p>
+    </div>
+</footer>
+<div class="plm-watermark"></div>
+<script src="Login.js"></script>
+</body>
+</html>

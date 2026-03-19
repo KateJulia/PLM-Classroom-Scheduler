@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - PLM Classroom Scheduler</title>
+    <link rel="stylesheet" href="Login.css"> 
+    <link rel="stylesheet" href="Scheduler.css">
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div class="loader-section section-left">
+            <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half">
+        </div>
+        <div class="loader-section section-right">
+            <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half">
+        </div>
+    </div>
+
+    <div class="plm-watermark"></div>
+    
+    <header class="navbar">
+        <div class="logo-section">
+            <img src="https://www.pikpng.com/pngl/b/78-780563_presidential-seal-png.png" alt="PLM Logo" class="plm-logo">
+            <div class="logo-text">
+                <h1>PAMANTASAN NG LUNGSOD NG MAYNILA</h1>
+                <p>University of the City of Manila</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Help.html">Help</a></li>
+                <li><a href="Login.html" class="Login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="accent-bar"></div>
+
+    <nav class="sticky-nav-bar">
+        <ul>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GA')">G. Atienza (GA)</a></li>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GB')">G. Bagatsing (GB)</a></li>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GCA')">G. Corazon Aquino (GCA)</a></li>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GEE')">G. Ejercito Estrada (GEE)</a></li>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GK')">G. Katipunan (GK)</a></li>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GL')">G. Lacson (GL)</a></li>
+            <li><a href="javascript:void(0)" onclick="showSchedule('GV')">G. Villegas (GV)</a></li>
+        </ul>
+    </nav>
+
+    <main class="scheduler-main-content">
+        <section class="landmarks-section">
+            <h2 class="section-title">PLM Campus</h2>
+            <div class="landmarks-container">
+                <div class="landmark-card">
+                    <img src="https://static.wikia.nocookie.net/mariaclaraatibarra/images/5/56/Pamantasan_ng_Lungsod_ng_Maynila.png/revision/latest/scale-to-width-down/1200?cb=20230121133113" alt="PLM Building">
+                </div>
+                <div class="landmark-card">
+                    <img src="https://plm.edu.ph/assets/sitemap2.DbaWS_DO.png" alt="PLM Map">
+                </div>
+            </div>
+        </section>
+
+        <div id="building-content" class="schedule-section" style="display: none;">
+            <div class="schedule-controls">
+                <button class="back-btn" onclick="showMap()">&larr; Back to Campus Map</button>
+                <div class="title-filter-row">
+                    <h2 id="building-title">Gusaling Atienza (GA)</h2>
+                    <div class="filter-group">
+                        <select id="roomFilter" onchange="loadRoomsByDate()">
+                            <option value="all">All Rooms</option>
+                            <option value="available">Available</option>
+                            <option value="occupied">Occupied</option>
+                        </select>
+                        <input type="date" id="datePicker" value="2026-03-19" onchange="loadRoomsByDate()">
+                    </div>
+                </div>
+            </div>
+            <div class="room-grid" id="roomGrid"></div>
+        </div>
+    </main>
+
+    <footer class="plm-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="https://www.pikpng.com/pngl/b/78-780563_presidential-seal-png.png" alt="PLM Logo" class="footer-logo">
+                <div class="footer-title">
+                    <h2>PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+                    <p>University of the City of Manila</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="contact-header">For more information, you may contact us at:</div>
+                <p><strong>Address:</strong> Gen. Luna Cor. Muralla Streets, Intramuros Manila, Philippines 1002</p>
+                <p><strong>Email:</strong> ithelp@plm.edu.ph</p>
+                <div class="hotline">PLM Hotline: (02) 8 995-46-70</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pamantasan ng Lungsod ng Maynila, All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Home.js"></script>
+</body>
+</html>
