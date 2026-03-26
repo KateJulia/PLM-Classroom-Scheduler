@@ -15,6 +15,8 @@ const buildingData = {
     'GV': { title: 'Gusaling Villegas', floors: [2, 3, 4, 5] }
 };
 
+//Di ko talaga alam 'to omg pacheck nalang nung mga javascript!! Nilagay ko lang para makita ano itsura nung Scheduler T-T
+
 let reservations = {}; 
 let currentBuildingCode = "";
 let selectedRoomKey = "";
@@ -119,7 +121,7 @@ document.addEventListener('wheel', function(e) {
 
         if (e.deltaY < 0) { // Scroll Up
             val = (val + step > max) ? min : val + step;
-        } else { // Scroll Down
+        } else {
             val = (val - step < min) ? max : val - step;
         }
 

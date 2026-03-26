@@ -43,12 +43,11 @@ function loadRoomsByDate() {
 
         const floorRow = document.createElement('div');
         floorRow.className = 'floor-row';
-        
+
+//Input database here to check reservations
         for(let i=1; i<=3; i++) {
             const roomNum = `${floor}0${i}`;
-            // In a real app, you'd fetch 'reservations' from a database here
             const isOccupied = false; 
-            
             if (filter !== 'all' && (isOccupied ? 'occupied' : 'available') !== filter) continue;
 
             floorRow.innerHTML += `

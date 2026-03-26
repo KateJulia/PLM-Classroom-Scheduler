@@ -428,3 +428,57 @@ body {
     font-size: 0.8rem;
     opacity: 0.7;
 }
+
+/*Admin Additions*/
+.btn-manage {
+    width: 100%;
+    background: #120a8f;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-manage:hover { background: #2b3a8c; transform: translateY(-2px); }
+
+.requests-list {
+    margin-top: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid #b18c00;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.req-details strong { display: block; color: #120a8f; font-size: 0.95rem; }
+.req-details span { font-size: 0.8rem; color: #666; font-weight: bold; }
+
+.req-actions { display: flex; gap: 8px; }
+
+.approve-btn, .remove-btn {
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.approve-btn { background: #00bc51; }
+.remove-btn { background: #990707; }
+.approve-btn:hover, .remove-btn:hover { opacity: 0.8; }

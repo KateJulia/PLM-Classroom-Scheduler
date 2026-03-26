@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - PLM Classroom Scheduler</title>
+    <title>Admin Dashboard - PLM Classroom Scheduler</title>
     <link rel="stylesheet" href="Login.css"> 
     <link rel="stylesheet" href="Scheduler.css">
 </head>
 <body>
     <div id="loader-wrapper">
-        <div class="loader-section section-left">
-            <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half">
-        </div>
-        <div class="loader-section section-right">
-            <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half">
-        </div>
+        <div class="loader-section section-left"><img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half"></div>
+        <div class="loader-section section-right"><img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" class="haribon-half"></div>
     </div>
 
     <div class="plm-watermark"></div>
-    
+
     <header class="navbar">
         <div class="logo-section">
             <img src="https://www.pikpng.com/pngl/b/78-780563_presidential-seal-png.png" alt="PLM Logo" class="plm-logo">
             <div class="logo-text">
                 <h1>PAMANTASAN NG LUNGSOD NG MAYNILA</h1>
-                <p>University of the City of Manila</p>
+                <p>Admin Control Panel</p>
             </div>
         </div>
         <nav>
             <ul>
-                <li><a href="Help.html">Help</a></li>
-                <li><a href="LoginScenario.html" class="Login">Login</a></li>
+                <li><a href="LoginScenario.html" class="logout-btn">Logout &#8633;</a></li>
             </ul>
         </nav>
     </header>
@@ -51,35 +46,34 @@
 
     <main class="scheduler-main-content">
         <section class="landmarks-section">
-            <h2 class="section-title">PLM Campus</h2>
+            <h2 class="section-title">Admin Management: Campus Map</h2>
             <div class="landmarks-container">
-                <div class="landmark-card">
-                    <img src="https://static.wikia.nocookie.net/mariaclaraatibarra/images/5/56/Pamantasan_ng_Lungsod_ng_Maynila.png/revision/latest/scale-to-width-down/1200?cb=20230121133113" alt="PLM Building">
-                </div>
-                <div class="landmark-card">
-                    <img src="https://plm.edu.ph/assets/sitemap2.DbaWS_DO.png" alt="PLM Map">
-                </div>
+                <div class="landmark-card"><img src="https://static.wikia.nocookie.net/mariaclaraatibarra/images/5/56/Pamantasan_ng_Lungsod_ng_Maynila.png/revision/latest" alt="PLM Building"></div>
+                <div class="landmark-card"><img src="https://plm.edu.ph/assets/sitemap2.DbaWS_DO.png" alt="PLM Map"></div>
             </div>
         </section>
 
         <div id="building-content" class="schedule-section" style="display: none;">
             <div class="schedule-controls">
-                <button class="back-btn" onclick="showMap()">&larr; Back to Campus Map</button>
+                <button class="back-btn" onclick="showMap()">&larr; Back to Map</button>
                 <div class="title-filter-row">
                     <h2 id="building-title">Gusaling Atienza (GA)</h2>
-                    <div class="filter-group">
-                        <select id="roomFilter" onchange="loadRoomsByDate()">
-                            <option value="all">All Rooms</option>
-                            <option value="available">Available</option>
-                            <option value="occupied">Occupied</option>
-                        </select>
-                        <input type="date" id="datePicker" value="2026-03-19" onchange="loadRoomsByDate()">
-                    </div>
+                    <input type="date" id="datePicker" value="2026-03-19" onchange="loadRoomsByDate()">
                 </div>
             </div>
             <div class="room-grid" id="roomGrid"></div>
         </div>
     </main>
+
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeAdminModal()">&times;</button>
+            <h2 class="modal-title">Room Requests</h2>
+            <p id="adminModalRoomLabel" style="font-weight: bold; color: #120a8f; text-align: center; font-size: 1.2rem;"></p>
+            <div id="pendingRequestsList" class="requests-list">
+                </div>
+        </div>
+    </div>
 
     <footer class="plm-footer">
         <div class="footer-container">
@@ -91,17 +85,17 @@
                 </div>
             </div>
             <div class="footer-right">
-                <div class="contact-header">For more information, you may contact us at:</div>
-                <p><strong>Address:</strong> Gen. Luna Cor. Muralla Streets, Intramuros Manila, Philippines 1002</p>
+                <div class="contact-header">Admin Support Contact:</div>
+                <p><strong>Address:</strong> Gen. Luna Cor. Muralla Streets, Intramuros Manila</p>
                 <p><strong>Email:</strong> ithelp@plm.edu.ph</p>
                 <div class="hotline">PLM Hotline: (02) 8 995-46-70</div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Pamantasan ng Lungsod ng Maynila, All rights reserved.</p>
+            <p>&copy; 2026 Admin Portal - Pamantasan ng Lungsod ng Maynila</p>
         </div>
     </footer>
 
-    <script src="Home.js"></script>
+    <script src="AdminScheduler.js"></script>
 </body>
 </html>

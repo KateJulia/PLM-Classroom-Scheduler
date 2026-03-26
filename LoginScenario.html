@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - PLM Scheduler</title>
+    <link rel="stylesheet" href="Login.css">
+    <style>
+        .gateway-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+        .role-card-container {
+            display: flex;
+            gap: 20px;
+        }
+        .role-link {
+            text-decoration: none;
+            padding: 40px;
+            background: white;
+            border: 2px solid #b18c00;
+            border-radius: 15px;
+            color: #120a8f;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .role-link:hover {
+            background: #b18c00;
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="gateway-container">
+        <img src="https://www.plm.edu.ph/assets/haribon-logo.DMMtENh_.png" style="width: 150px; margin-bottom: 20px;">
+        <h1>Select Your Portal</h1>
+        <div class="role-card-container">
+            <a href="FacultyLogin.html" class="role-link">Faculty Portal</a>
+            <a href="AdminLogin.html" class="role-link">Admin Portal</a>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>
