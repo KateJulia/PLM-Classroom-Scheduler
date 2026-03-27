@@ -1,0 +1,52 @@
+.gateway-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    gap: 30px;
+}
+
+.role-card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.role-link {
+    text-decoration: none;
+    padding: 40px;
+    background: white;
+    border: 2px solid #b18c00;
+    border-radius: 15px;
+    color: #120a8f;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.role-link:hover {
+    background: #b18c00;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.back-home-container {
+    margin-top: 10px;
+}
+
+.back-btn {
+    background-color: #990707; 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #7a0606; 
+}
