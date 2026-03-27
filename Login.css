@@ -255,7 +255,7 @@ nav a:hover {
     right: -50px;
     width: 500px;
     height: 500px;
-    background-image: url('https://www.pikpng.com/pngl/b/78-780563_presidential-seal-png.png');
+    background-image: url('plm-seal.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.1;
@@ -272,7 +272,7 @@ nav a:hover {
     width: 100%;
     background: 
         linear-gradient(rgba(153, 7, 7, 0.9), rgba(153, 7, 7, 0.9)),
-        url('https://www.rappler.com/tachyon/r3-assets/612F469A6EA84F6BAE882D2B94A4B421/img/8C9C528B64444AC98381B504505B1DB1/pamantasan-lungsod-maynila.jpg');
+        url('plm-bg.png');
     background-size: cover;     
     background-position: center;      
     background-repeat: no-repeat;

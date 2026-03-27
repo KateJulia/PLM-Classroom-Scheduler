@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
     const loader = document.getElementById('loader-wrapper');
     setTimeout(() => {
         loader.classList.add('loaded');
-    }, 1000); 
+    }, 500); 
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const successOverlay = document.getElementById('successOverlay');
     const bottomTarget = document.querySelector('#bottom-target');
 
-    //Smooth Scroll to Footer
+    //Smooth Scroll
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', function(e) {
             e.preventDefault();
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    //Form Submission Logic
+    //Form Submission
     if (supportForm) {
         supportForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-//Global function to close the success modal
+// Close the success modal
 function closeSuccess() {
     const successOverlay = document.getElementById('successOverlay');
     const supportForm = document.getElementById('supportForm');

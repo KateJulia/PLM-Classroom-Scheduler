@@ -2,9 +2,10 @@ window.addEventListener('load', function() {
     const loader = document.getElementById('loader-wrapper');
     setTimeout(() => {
         loader.classList.add('loaded');
-    }, 1000); 
+    }, 500); 
 });
 
+//Floors per Building
 const buildingData = {
     'GA': { title: 'Gusaling Atienza', floors: [2, 3] },
     'GB': { title: 'Gusaling Bagatsing', floors: [1, 2, 3] },
@@ -15,12 +16,11 @@ const buildingData = {
     'GV': { title: 'Gusaling Villegas', floors: [2, 3, 4, 5] }
 };
 
-//Di ko talaga alam 'to omg pacheck nalang nung mga javascript!! Nilagay ko lang para makita ano itsura nung Scheduler T-T
-
 let reservations = {}; 
 let currentBuildingCode = "";
 let selectedRoomKey = "";
 
+//UI Navigation
 function showSchedule(code) {
     currentBuildingCode = code;
     document.querySelector('.landmarks-section').style.display = 'none'; 
@@ -95,6 +95,7 @@ function parseTime(tStr) {
     return d;
 }
 
+// Modal
 function openModal(room) {
     selectedRoomKey = room.replace(" ", "_");
     document.getElementById('modalRoomLabel').innerText = room;
@@ -109,7 +110,7 @@ function toggleAMPM(el) {
     spans.forEach(s => s.classList.toggle('active'));
 }
 
-// Function to handle scrollable time inputs
+//Scrollable time inputs
 document.addEventListener('wheel', function(e) {
     if (e.target.tagName === 'INPUT' && e.target.type === 'number') {
         e.preventDefault(); 
@@ -125,7 +126,7 @@ document.addEventListener('wheel', function(e) {
             val = (val - step < min) ? max : val - step;
         }
 
-        // Format minutes with leading zero, hours stay as is
+        // Minutes with leading zeroes
         e.target.value = e.target.id.includes('M') ? String(val).padStart(2, '0') : val;
     }
 }, { passive: false });
@@ -167,7 +168,7 @@ function confirmRequest() {
 function closeSchedulerSuccess() {
     document.getElementById('schedulerSuccessOverlay').style.display = 'none';
     
-    // Clears professor inputs for the next use
+    // Clears inputs if refreshed
     document.getElementById('profSurname').value = '';
     document.getElementById('profFirstName').value = '';
     document.getElementById('profID').value = '';
